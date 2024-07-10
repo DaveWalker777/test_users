@@ -1,0 +1,15 @@
+{% extends 'users/base.html' %}
+
+{% block title %}
+Обновление пользователя
+{% endblock %}
+
+{% block content %}
+    <h1 style="color:red">Обновить пользователя</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}<br>
+        <button type="submit" class="btn btn-success"> Обновить </button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
